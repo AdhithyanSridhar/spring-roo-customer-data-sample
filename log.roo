@@ -1,0 +1,13 @@
+// Spring Roo 2.0.0.RELEASE [rev 4a2e9f1] log opened at 2018-08-29 11:56:34
+hint
+project setup --topLevelPackage com.techprudent
+jpa setup --provider HIBERNATE --database H2_IN_MEMORY --force 
+entity jpa --class ~.entity.Customer
+field string --fieldName customerName
+field string --fieldName age
+field string --fieldName gender
+repository jpa --all
+service --all 
+web mvc setup 
+web mvc view setup --type THYMELEAF 
+web mvc controller --all --responseType THYMELEAF 
