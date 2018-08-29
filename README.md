@@ -69,18 +69,36 @@ https://docs.spring.io/spring-boot/docs/current/reference/html/getting-started-i
 steps followed:
 
 mkdir hello
+
+
 cd hello
+
 roo
+
 roo> project setup --topLevelPackage com.foo
+
 roo> jpa setup --provider HIBERNATE --database HYPERSONIC_IN_MEMORY
+
 roo> entity jpa --class ~.domain.Customer
+
 roo> field string --fieldName customerName --notNull
+
 roo> field string --fieldName age --notNull
+
 roo> field string --fieldName gender --notNull
+
 roo> repository jpa --all
+
 roo> service --all
+
 roo> web mvc setup
+
 roo> web mvc view setup --type THYMELEAF
+
 roo> web mvc controller --all --responseType THYMELEAF
+
 roo> quit
+
 mvn spring-boot:run
+
+Goto localhost:8080
